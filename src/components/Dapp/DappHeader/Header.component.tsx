@@ -1,4 +1,4 @@
-import Appbar from "components/common/Appbar/Appbar.component";
+import DappAppbar from "components/Dapp/Appbar/DAppbar.component";
 import Toolbar from "components/Dapp/Toolbar/Toolbar.component";
 
 type Props = {};
@@ -6,7 +6,7 @@ type Props = {};
 const DappHeader = (props: Props) => {
   return (
     <div className="">
-      <Appbar />
+      <DappAppbar />
       <Toolbar />
     </div>
   );

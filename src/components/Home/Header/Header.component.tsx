@@ -1,12 +1,13 @@
-import Appbar from "components/common/Appbar/Appbar.component";
 import rotatingLogo from "assets/img/Group56.svg";
+import { motion } from "framer-motion";
+import HomeAppbar from "../Appbar/Appbar.component";
 
 type Props = {};
 
 const Header = (props: Props) => {
   return (
     <div className="">
-      <Appbar from_page="home" />
+      <HomeAppbar/>
       <div className=" w-full flex flex-row justify-center">
         <div className="w-5/6 flex flex-col-reverse items-center sm:flex-row justify-between">
           <div className="sm:hidden my-5">
@@ -24,7 +25,16 @@ const Header = (props: Props) => {
             </p>
           </div>
           <div className="w-full sm:w-1/3 h-[20em] sm:h-[30em] flex justify-center items-center">
-            <img src={rotatingLogo} alt="rotating logo" />
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 100000,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <img src={rotatingLogo} alt="rotating logo" />
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "assets/img/Frame.svg";
 import twitterLogo from "assets/img/twitter-logo.svg";
 import discordLogo from "assets/img/discord-logo.svg";
@@ -48,7 +47,7 @@ const FooterSection = (props: Props) => {
             had the courage to step into DeFi 3.0!
           </p>
         </div>
-        <div className="w-full flex items-center justify-center my-16 gap-10">
+        <div className="w-full flex items-center justify-center my-5 sm:my-16 gap-10">
           <div className="h-20">
             <img className="w-full h-full" src={logo} alt="logo" />
           </div>
@@ -76,6 +75,10 @@ const FooterSection = (props: Props) => {
             </button>
           </div>
         </div>
+
+        <p className="mb-5 my-2 text-white text-center text-xl">
+          © Copyright 2022 Convex Financial
+        </p>
       </div>
     </div>
   );

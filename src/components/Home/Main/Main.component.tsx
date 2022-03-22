@@ -9,7 +9,7 @@ const HomeMainSection = (props: Props) => {
     <div className="w-full flex flex-col justify-center items-center">
       <InfosSection />
       <HowItWorksSection />
-    <FAQSection />
+      <FAQSection />
     </div>
   );
 };

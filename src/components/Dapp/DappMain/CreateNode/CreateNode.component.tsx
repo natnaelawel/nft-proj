@@ -33,7 +33,7 @@ const CreateNodeSection = (props: Props) => {
             CREATE A NODE
           </p>
 
-          <div className="w-4/5 my-5 flex flex-col sm:flex-row justify-center gap-16 ">
+          <div className="w-5/6 md:w-4/5 my-5 flex flex-col sm:flex-row justify-center gap-2 sm:gap-5 lg:gap-16 ">
             {nodes &&
               nodes.map((node) => {
                 return (

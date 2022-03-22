@@ -1,8 +1,101 @@
-import React from "react";
+import React, { ReactChildren, useState } from "react";
+import { FaMinus, FaPlus } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 type Props = {};
 
+export const ComponentAnimator = ({
+  children,
+}: {
+  children: ReactChildren;
+}) => {
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
+  return (
+    <motion.div
+      animate={{ scale: 2 }}
+      transition={{ duration: 0.5 }}
+      variants={variants}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+type FAQType = {
+  id: number;
+  title: string;
+  detail: string;
+};
+
 const FAQSection = (props: Props) => {
+  const faqs: FAQType[] = [
+    {
+      id: 1,
+      title: "How can I create a node ?",
+      detail:
+        "Here is the distribution, once a node is created : 80% are moved are converted in BNB) and 10% are moved to research & development/growth wallet. ",
+    },
+    {
+      id: 2,
+      title: "Where do the tokens go when I buy a Node ?",
+      detail:
+        "Here is the distribution, once a node is created : 80% are moved are converted in BNB) and 10% are moved to research & development/growth wallet. ",
+    },
+    {
+      id: 3,
+      title:
+        "Why did you choose Avalanche & not another Blockchain like Ethereum ?",
+      detail:
+        "Here is the distribution, once a node is created : 80% are moved are converted in BNB) and 10% are moved to research & development/growth wallet. ",
+    },
+    {
+      id: 4,
+      title:
+        "Why did you choose Avalanche & not another Blockchain like Ethereum ?",
+      detail:
+        "Here is the distribution, once a node is created : 80% are moved are converted in BNB) and 10% are moved to research & development/growth wallet. ",
+    },
+  ];
+
+  const SingleFaq = ({ faq }: { faq: FAQType }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const handleToggle = () => {
+      setIsExpanded(!isExpanded);
+    };
+
+    return (
+      <div className="w-full my-3 bg-slate-900 sm:bg-white rounded-3xl">
+        <div className="relative w-full py-3  px-5 sm:px-10 inline-flex items-center rounded-2xl text-white node_background_box_gradient">
+          <span className="absolute sm:font-extrabold text:lg  sm:text-4xl w-10 sm:w-16 border left-0"></span>
+          <p className="px-10 w-full font-bold sm:text-xl">{faq.title}</p>
+          <button
+            className="font-extrabold text-xl sm:text-2xl md:text-4xl"
+            onClick={handleToggle}
+          >
+            {!isExpanded ? <FaPlus /> : <FaMinus />}
+          </button>
+        </div>
+        {isExpanded && (
+          <motion.div
+            variants={{
+              open: { opacity: 1, x: 0 },
+              closed: { opacity: 0, x: "-100%" },
+            }}
+            transition={{ duration: 1 }}
+          >
+            <div className="faq_content p-10 text-white sm:text-black">
+              <p className="sm:text-lg">{faq.detail}</p>
+            </div>
+          </motion.div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="w-full flex justify-center">
       <div className="p-5 sm:p-10 w-7/8 sm:w-4/6 flex flex-col justify-center">
@@ -10,51 +103,10 @@ const FAQSection = (props: Props) => {
           FAQ
         </p>
         <div className="faqs">
-          <div className="w-full my-3 rounded-3xl">
-            <div className="relative w-full py-3  px-10 inline-flex items-center rounded-2xl text-white node_background_box_gradient">
-              <span className="absolute font-extrabold text-4xl w-10 sm:w-16 border left-0"></span>
-              <p className="px-10 w-full font-bold text-xl">
-                How can I create a node ?
-              </p>
-              <span className="font-extrabold text-4xl">+</span>
-            </div>
-          </div>
-          <div className="w-full my-3 rounded-3xl">
-            <div className="relative w-full py-3  px-10 inline-flex items-center rounded-2xl text-white node_background_box_gradient">
-              <span className="absolute font-extrabold text-4xl w-10 sm:w-16 border left-0"></span>
-              <p className="px-10 w-full font-bold text-xl">
-                When can I claim my rewards ?{" "}
-              </p>
-              <span className="font-extrabold text-4xl">+</span>
-            </div>
-          </div>
-          <div className="w-full my-3 h-[15em] bg-white rounded-3xl">
-            <div className="relative w-full py-3  px-10 inline-flex items-center rounded-2xl text-white node_background_box_gradient">
-              <span className="absolute font-extrabold text-4xl w-10 sm:w-16 border left-0"></span>
-              <p className="px-10 w-full font-bold text-xl">
-                Where do the tokens go when I buy a Node ?
-              </p>
-              <span className="font-extrabold text-4xl">-</span>
-            </div>
-            <div className="faq_content p-10">
-              <p className="text-lg">
-                Here is the distribution, once a node is created : 80% are moved
-                to the reward pool, 10% tokens to the liquidity pool (5% tokens
-                are converted in BNB) and 10% are moved to research &
-                development/growth wallet.
-              </p>
-            </div>
-          </div>
-          <div className="w-full my-3 rounded-3xl">
-            <div className="relative w-full py-3  px-10 inline-flex items-center rounded-2xl text-white node_background_box_gradient">
-            <span className="absolute font-extrabold text-4xl w-10 sm:w-16 border left-0"></span>
-              <p className="px-10 w-full font-bold text-xl">
-                Why did you choose Avalanche & not another Blockchain like
-                Ethereum ?
-              </p>
-              <span className="font-extrabold text-4xl">+</span>
-            </div>
-          </div>
+          {faqs &&
+            faqs.map((faq) => {
+              return <SingleFaq faq={faq} key={faq.id} />;
+            })}
         </div>
       </div>
     </div>

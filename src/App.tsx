@@ -6,13 +6,12 @@ import DappPage from "pages/dapp";
 function App() {
   document.documentElement.classList.add("dark");
   return (
-    <div
-      className="min-h-screen bg-white dark:bg-black"
-    >
+    <div className="min-h-screen max-w-screen overflow-x-hidden bg-white dark:bg-black">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/dapp" element={<DappPage />} />
+          <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
       </BrowserRouter>
     </div>
