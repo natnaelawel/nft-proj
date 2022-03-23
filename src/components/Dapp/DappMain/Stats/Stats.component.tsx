@@ -5,10 +5,12 @@ type Props = {};
 const StatsSection = (props: Props) => {
   return (
     <div className="w-full flex flex-col sm:flex-row justify-between sm:gap-10 items-center">
-      <div className="toolbar_gradient p-0.5 w-full sm:w-1/3 rounded-2xl sm:h-[19rem]">
-        <div className="p-5 bg-slate-900 rounded-2xl w-full min-h-full">
-          <img src={cpuIcon} alt="cpu image" />
-          <p className="text-white">My Nodes: /100</p>
+      <div className="toolbar_gradient p-0.5 w-full sm:w-1/3 rounded-2xl sm:h-[19rem] flex flex-col items-center min-h-full">
+        <div className="px-5 bg-slate-900 rounded-2xl w-full  min-h-full flex flex-col justify-center">
+          <div className="py-5 flex flex-row gap-5">
+            <img src={cpuIcon} alt="cpu image" />
+            <p className="text-white">My Nodes: /100</p>
+          </div>
         </div>
       </div>
       <div className="toolbar_gradient p-0.5 my-5 w-full sm:w-1/3 rounded-2xl h-[19rem]">
@@ -32,9 +34,7 @@ const StatsSection = (props: Props) => {
         </div>
       </div>
       <div className="toolbar_gradient p-0.5 w-full sm:w-1/3 rounded-2xl sm:h-[19rem]">
-        <div
-          className="sm:h-full px-5 py-5 bg-slate-900 rounded-2xl w-full"
-        >
+        <div className="sm:h-full px-5 py-5 bg-slate-900 rounded-2xl w-full">
           <div className="py-5 flex flex-row gap-5">
             <img src={repeatIcon} alt="cpu image" />
             <p className="text-white">Rewards</p>

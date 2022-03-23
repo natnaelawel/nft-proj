@@ -72,20 +72,23 @@ const FAQSection = (props: Props) => {
         <div className="relative w-full py-3  px-5 sm:px-10 inline-flex items-center rounded-2xl text-white node_background_box_gradient">
           <span className="absolute sm:font-extrabold text:lg  sm:text-4xl w-10 sm:w-16 border left-0"></span>
           <p className="px-10 w-full font-bold sm:text-xl">{faq.title}</p>
-          <button
-            className="font-extrabold text-xl sm:text-2xl md:text-4xl"
-            onClick={handleToggle}
-          >
+          <button className="text-xl sm:text-xl" onClick={handleToggle}>
             {!isExpanded ? <FaPlus /> : <FaMinus />}
           </button>
         </div>
         {isExpanded && (
           <motion.div
             variants={{
-              open: { opacity: 1, x: 0 },
-              closed: { opacity: 0, x: "-100%" },
+              open: {
+                opacity: 1,
+              },
+              closed: {
+                opacity: 0,
+              },
             }}
-            transition={{ duration: 1 }}
+            transition={{
+              duration: 3,
+            }}
           >
             <div className="faq_content p-10 text-white sm:text-black">
               <p className="sm:text-lg">{faq.detail}</p>
