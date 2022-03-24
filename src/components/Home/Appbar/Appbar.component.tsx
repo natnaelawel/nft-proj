@@ -43,12 +43,12 @@ const HomeAppbar = (props: Props) => {
 
   return (
     <div className="w-full flex flex-row justify-center">
-      <div className="w-full px-3 py-8 sm:py-10 flex flex-row justify-between sm:w-5/6 ">
+      <div className="w-full px-3 py-8 sm:py-10 flex flex-row justify-between items-center sm:w-5/6 ">
         <div className="w-1/2 md:w-1/3 lg:w-1/4">
           <HomeLogo />
         </div>
         <div className="sm:px-16 py w-1/2 flex flex-row justify-end gap-6 items-center">
-          <div className="flex gap-1 sm:gap-5">
+          <div className="hidden md:flex gap-1 lg:gap-5 items-center">
             <button className="toolbar_gradient p-3 flex justify-center items-center h-12 w-12 rounded-full">
               <img
                 className=" ring-white"
@@ -70,7 +70,7 @@ const HomeAppbar = (props: Props) => {
                 alt="discord-logo"
               />
             </button>
-            <div>
+            <div className="flex justify-center min-w-[10em]">
               <button
                 type="button"
                 className="hidden sm:block toolbar_gradient px-6 py-3 rounded-full text-white font-bold uppercase"

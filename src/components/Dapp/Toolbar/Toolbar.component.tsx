@@ -1,3 +1,5 @@
+import CustomLink from "components/common/NavLink.component";
+
 type Props = {};
 
 const Toolbar = (props: Props) => {
@@ -7,13 +9,13 @@ const Toolbar = (props: Props) => {
         <div className="text-center w-full  xl:w-1/2 flex justify-start flex-row md:justify-start gap-1 items-center divide-x-2 sm:divide-none">
           <div className="w-full xl:w-11/12  flex gap-2 md:gap-5 xl:gap-10  md:py-3 items-center divide-x-2 md:divide-none text-center flex-row">
             <p className="w-1/2 md:w-auto font-semibold lg:font-bold lg:text-lg xl:text-xl text-white">
-              APP
+              <CustomLink to="#">APP</CustomLink>
             </p>
             <p className="w-1/2 md:w-auto font-semibold lg:font-bold xl:text-xl text-white">
-              CREATE NODE
+              <CustomLink to="#">CREATE NODE</CustomLink>
             </p>
             <p className="w-1/2 md:w-auto font-semibold lg:font-bold xl:text-xl text-white">
-              COMMUNITY
+              <CustomLink to="#">COMMUNITY</CustomLink>
             </p>
           </div>
         </div>
@@ -21,10 +23,10 @@ const Toolbar = (props: Props) => {
         <div className="w-full  xl:w-1/2 flex flex-row justify-start lg:justify-end items-center  divide-x-2 md:divide-none">
           <div className="w-full  xl:w-11/12 2xl:w-2/3 gap-2 md:gap-5 xl:gap-10 flex md:py-3 items-center divide-x-2 md:divide-none text-center flex-row">
             <p className="w-full md:w-auto font-semibold xl:font-bold lg:text-lg xl:text-xl text-white ">
-              PRICE CHART
+              <CustomLink to="#">PRICE CHART</CustomLink>
             </p>
             <p className="w-full md:w-auto font-semibold xl:font-bold lg:text-lg xl:text-xl text-white ">
-              CONTACT ADDRESS
+              <CustomLink to="#">CONTACT ADDRESS</CustomLink>
             </p>
           </div>
         </div>

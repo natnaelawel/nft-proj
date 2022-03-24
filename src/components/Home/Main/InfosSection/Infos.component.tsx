@@ -22,19 +22,18 @@ const InfosSection = (props: Props) => {
   ];
 
   return (
-    <div className="w-full sm:bg-white flex justify-center sm:min-h-[40em] items-center">
-      <div className="hide-scroll-bar px-5 h-[20em] w-full overflow-auto scroll-smooth snap-x sm:w-4/5 my-5 flex flex-row  gap-5 sm:gap-16 sm:h-[28em]">
+    <div className="w-full sm:bg-white flex justify-center md:min-h-[40em] items-center">
+      <div className="hide-scroll-bar px-5 h-[20em] w-full overflow-auto scroll-smooth snap-x xl:w-11/12 2xl:w-4/5 my-5 flex flex-row  gap-5 xl:gap-16 sm:h-[28em]">
         {nodes &&
           nodes.map((node) => {
             return (
               <div className="sm:p-1.5 snap-center min-w-[20em] sm:w-1/3 rounded-full h-full flex flex-row sm:flex-col items-center text_background_box_reversed sm:justify-center ">
-                <div className="h-full flex flex-col items-center p-5 sm:p-10 sm:text_background_box">
-                  <div className="flex flex-col gap-3">
-
-                    <p className="my-2 sm:my-5 text-white text-center text-2xl sm:text-4xl font-bold">
+                <div className="h-full flex flex-col justify-between items-between p-5 xl:p-10 sm:text_background_box">
+                  <div className="flex flex-col justify-center items-center h-full gap-3 xl:gap-5">
+                    <p className=" text-white text-center text-xl xl:text-2xl 2xl:text-3xl font-bold">
                       {node.title}
                     </p>
-                    <p className="sm:my-2 text-white text-base sm:text-lg text-center">
+                    <p className="sm:line-clamp-7   xl:line-clamp-10 text-white text-base sm:text-lg text-center">
                       {node.subtitle1}
                     </p>
                   </div>

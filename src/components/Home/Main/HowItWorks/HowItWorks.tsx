@@ -58,7 +58,7 @@ const HowItWorksSection = (props: Props) => {
     return (
       <div className="rounded-3xl p-1.5 sm:text_background_box">
         <div className="w-full flex flex-row gap-3 sm:flex-col items-center justify-center sm:justify-end bg:white node_background_box_white">
-          <div className=" flex flex-col items-center gap-2 py-3">
+          <div className="flex flex-col items-center gap-2 py-3">
             <div className="relative w-full min-h-[15em] ">
               <AshtonAnimation />
             </div>
@@ -239,15 +239,14 @@ const HowItWorksSection = (props: Props) => {
           <p className="text-xl py-5">
             Create your Node in exchange of your tokens
           </p>
-          <div className="text-gray-600 sm:px-5 md:px-5 lg:px-8 xl:px-16 2xl:px-24  my-5 flex flex-col sm:flex-row justify-center gap-2 sm:gap-5 xl:gap-10 2xl:gap-20">
-
-            <div className="w-full md:w-1/3 h-full">
+          <div className="relative h-full px-8 sm:px-0 text-gray-600 lg:px-8 xl:px-16 2xl:px-24  my-5 flex flex-col sm:flex-row justify-center items-center gap-2 md:gap-5 xl:gap-10 2xl:gap-20">
+            <div className="w-full lg:w-1/3 h-full">
               <AshtonComponent />
             </div>
-            <div className="w-full md:w-1/3 h-full">
+            <div className="w-full lg:w-1/3 h-full">
               <PigComponent />
             </div>
-            <div className="w-full md:w-1/3 h-full">
+            <div className="w-full lg:w-1/3 h-full">
               <VipComponent />
             </div>
           </div>

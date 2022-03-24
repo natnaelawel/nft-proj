@@ -17,7 +17,7 @@ const DappAppbar = (props: Props) => {
         </div>
         <div className="px-5 sm:px-16 w-1/2 flex flex-row justify-end gap-5 items-center">
           <div className="flex gap-5">
-            <div className="hidden sm:flex gap-5">
+            <div className="hidden md:flex gap-5">
               <button className="toolbar_gradient p-3 flex justify-center items-center h-12 w-12 rounded-full">
                 <img
                   className=" ring-white"

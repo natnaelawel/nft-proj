@@ -52,7 +52,11 @@ const CreateNodeSection = (props: Props) => {
           }}
         >
           <div className="absolute p-10 lg:p-5  w-full sm:mt-10 flex justify-center items-center ">
-            <img className=" md:w-full md:h-full" src={ashton1Image} alt="cpu image" />
+            <img
+              className=" md:w-full md:h-full"
+              src={ashton1Image}
+              alt="cpu image"
+            />
           </div>
         </motion.div>
         <motion.div
@@ -81,21 +85,19 @@ const CreateNodeSection = (props: Props) => {
   const AshtonComponent = () => {
     return (
       <div className="rounded-3xl p-1.5 w-full node_background_box_white sm:node_background_box_gradient h-full">
-        <div className="flex w-full flex-row gap-3 sm:flex-col items-center justify-center sm:justify-end bg:white md:text-white">
-          <div className=" flex flex-col items-center gap-2 py-3">
+        <div className="flex w-full h-full flex-row gap-3 sm:flex-col items-center justify-center sm:justify-end bg:white md:text-white">
+          <div className=" flex flex-col justify-center items-center gap-2 py-3">
             <div className="relative w-full min-h-[10em] sm:min-h-[15em]">
               <AshtonAnimation />
             </div>
-            <p className="my-2 text-center text-4xl font-bold">
-              Ashton
-            </p>
+            <p className="my-2 text-center text-4xl font-bold">Ashton</p>
             <p className="my-1 text-lg sm:text-xl text-center">
               10 CON$ per node
             </p>
             <p className="my-1 text-lg sm:text-xl  text-center">
               EARN 0.40 CON$ per node
             </p>
-            <button className="px-5 py-2 sm:mt-5 sm:py-2 sm:px-5 node_background_box_gradient sm:node_background_box_none sm:rounded-2xl sm:border-2 text-white sm:text-lg sm:font-bold">
+            <button className="align-bottom px-5 py-2 sm:mt-5 sm:py-2 sm:px-5 node_background_box_gradient sm:node_background_box_none sm:rounded-2xl sm:border-2 text-white sm:text-lg sm:font-bold">
               CREATE NODE
             </button>
           </div>
@@ -136,21 +138,19 @@ const CreateNodeSection = (props: Props) => {
   const VipComponent = () => {
     return (
       <div className="rounded-3xl p-1.5 w-full node_background_box_white sm:node_background_box_gradient h-full">
-        <div className="flex w-full flex-row gap-3 sm:flex-col items-center justify-center sm:justify-end bg:white md:text-white">
-          <div className=" flex flex-col items-center gap-2  py-3">
-          <div className="relative w-full min-h-[10em] sm:min-h-[15em]">
+        <div className="flex w-full h-full flex-row gap-3 sm:flex-col items-center justify-center sm:justify-end bg:white md:text-white">
+          <div className=" h-full flex flex-col justify-center items-center gap-2  py-3">
+            <div className="relative w-full min-h-[10em] sm:min-h-[15em]">
               <VipAnimation />
             </div>
-            <p className="my-2 text-center text-4xl font-bold">
-              SATINE
-            </p>
+            <p className="my-2 text-center text-4xl font-bold">SATINE</p>
             <p className="my-1 text-lg sm:text-xl  text-center">
               50 CON$ per node
             </p>
             <p className="my-1 text-lg sm:text-xl  text-center">
               EARN 2.5 CON$ per node
             </p>
-            <button className="px-5 py-2 sm:mt-5 sm:py-2 sm:px-5 node_background_box_gradient sm:node_background_box_none sm:rounded-2xl sm:border-2 text-white sm:text-lg sm:font-bold">
+            <button className="align-bottom px-5 py-2 sm:mt-5 sm:py-2 sm:px-5 node_background_box_gradient sm:node_background_box_none sm:rounded-2xl sm:border-2 text-white sm:text-lg sm:font-bold">
               CREATE NODE
             </button>
           </div>
@@ -161,11 +161,11 @@ const CreateNodeSection = (props: Props) => {
 
   const PiggyAnimation = () => {
     return (
-      <div className="min-h-[12em]">
-        <div className="absolute w-full bottom-0 sm:mt-10 flex justify-center items-center z-0">
+      <div className="h-full w-full flex items-center justify-center  relative">
+        <div className="absolute w-full bottom-0 sm:mt-10 p-5 flex justify-center items-center z-0">
           <img className="w-full h-full" src={piggyImage} alt="cpu image" />
         </div>
-        <div className="w-full h-full z-20">
+        <div className=" absolute -bottom-8 sm:bottom-10 w-full h-full z-20">
           <motion.div
             initial={{
               y: -100,
@@ -181,7 +181,7 @@ const CreateNodeSection = (props: Props) => {
               bounce: 1,
             }}
           >
-            <div className="w-8 left-14 -bottom-28 sm:bottom-auto  absolute sm:mt-10 flex justify-center items-start h-[5em] sm:h-[10em] z-10">
+            <div className="w-8 left-16  absolute sm:mt-10 flex justify-center items-start h-[5em] sm:h-[10em] z-10">
               <img
                 className="w-full h-full"
                 src={crypto2Image}
@@ -190,7 +190,7 @@ const CreateNodeSection = (props: Props) => {
             </div>
           </motion.div>
         </div>
-        <div className="w-full h-full z-10">
+        <div className="absolute -bottom-0 sm:bottom-10 w-full h-full z-10">
           <motion.div
             initial={{
               y: -100,
@@ -207,7 +207,7 @@ const CreateNodeSection = (props: Props) => {
               bounce: 1,
             }}
           >
-            <div className="absolute left-16 -bottom-32 sm:bottom-auto w-8 sm:mt-10 flex justify-center items-start h-[5em] sm:h-[10em] z-10">
+            <div className="absolute left-20  w-8 sm:mt-10 flex justify-center items-start h-[5em] sm:h-[10em] z-10">
               <img
                 className="w-full h-full"
                 src={crypto1Image}
@@ -222,18 +222,18 @@ const CreateNodeSection = (props: Props) => {
   const PigComponent = () => {
     return (
       <div className="rounded-3xl p-1.5 w-full node_background_box_white sm:node_background_box_gradient h-full">
-        <div className="flex w-full flex-row gap-3 sm:flex-col items-center justify-center sm:justify-end bg:white md:text-white">
+        <div className="flex w-full h-full flex-row gap-3 sm:flex-col items-center justify-center sm:justify-end bg:white md:text-white">
           <div className=" flex flex-col items-center gap-2 py-3">
-          <div className="relative w-full min-h-[10em] md:min-h-[15em]">
-              <PiggyAnimation />
+            <div className="relative w-full min-h-[10em] md:min-h-[15em]">
+              <div className="absolute -bottom-10 lg:bottom-auto w-full h-full flex items-center justify-center">
+                <PiggyAnimation />
+              </div>
             </div>
-            <p className="my-2 text-center text-4xl font-bold">
-              CLEYEN
-            </p>
-            <p className="my-1 text-sm sm:text-base text-center">
+            <p className="my-2 text-center text-4xl font-bold">CLEYEN</p>
+            <p className="my-1 text-lg sm:text-xl text-center">
               30 CON$ per node
             </p>
-            <p className="my-1 text-sm sm:text-base  text-center">
+            <p className="my-1 text-lg sm:text-xl text-center">
               EARN 1.40 CON$ per node
             </p>
             <button className="px-5 py-2 sm:mt-5 sm:py-2 sm:px-5 node_background_box_gradient sm:node_background_box_none sm:rounded-2xl sm:border-2 text-white sm:text-lg sm:font-bold">
@@ -253,15 +253,15 @@ const CreateNodeSection = (props: Props) => {
             CREATE A NODE
           </p>
 
-          <div className="w-full   my-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-5 xl:gap-8 2xl:gap-16 ">
-            <div className="w-5/6 text-gray-600 sm:text-white sm:px-5 md:px-5 lg:px-8 xl:px-16 2xl:px-24  my-5 gap-y-10 flex flex-col sm:flex-row justify-center gap-2 sm:gap-2 xl:gap-10 ">
-              <div className="w-full md:w-1/3 min-h-full">
+          <div className="w-full  my-5 flex flex-col sm:flex-row items-center justify-center">
+            <div className="w-full md:w-11/12 xl:w-5/6 text-gray-600 sm:text-white px-1 md:px-2 xl:px-5 xl:px-16 2xl:px-24  my-5 gap-y-10 flex flex-col sm:flex-row justify-center gap-2 sm:gap-2 xl:gap-5 2xl:gap-10 ">
+              <div className="w-full">
                 <AshtonComponent />
               </div>
-              <div className="w-full md:w-1/3 min-h-full">
+              <div className="w-full">
                 <PigComponent />
               </div>
-              <div className="w-full md:w-1/3 min-h-full">
+              <div className="w-full">
                 <VipComponent />
               </div>
             </div>
