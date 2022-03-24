@@ -4,7 +4,7 @@ type Props = {};
 
 const StatsSection = (props: Props) => {
   return (
-    <div className="w-full flex flex-col sm:flex-row justify-between sm:gap-10 items-center">
+    <div className="w-full flex flex-col sm:flex-row justify-between gap-2 md:gap-10 items-center">
       <div className="toolbar_gradient p-0.5 w-full sm:w-1/3 rounded-2xl sm:h-[19rem] flex flex-col items-center min-h-full">
         <div className="px-5 bg-slate-900 rounded-2xl w-full  min-h-full flex flex-col justify-center">
           <div className="py-5 flex flex-row gap-5">
@@ -14,8 +14,8 @@ const StatsSection = (props: Props) => {
         </div>
       </div>
       <div className="toolbar_gradient p-0.5 my-5 w-full sm:w-1/3 rounded-2xl h-[19rem]">
-        <div className="px-5 py-5 bg-slate-900 rounded-2xl w-full h-full">
-          <div className="py-5 flex flex-row gap-5">
+        <div className="px-2 md:px-5 py-5 bg-slate-900 rounded-2xl w-full h-full">
+          <div className="py-5 flex flex-row gap-5 sm:gap-1 lg:gap-5">
             <img src={cpuIcon} alt="cpu image" />
             <p className="text-white">Total nodes: 0</p>
           </div>

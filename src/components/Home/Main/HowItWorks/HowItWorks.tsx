@@ -234,7 +234,7 @@ const HowItWorksSection = (props: Props) => {
             </button>
           </div>
         </div>
-        <div className="step2 text-center text-white ">
+        <div className="step2 text-center text-white flex flex-col">
           <p className="text-2xl font-bold">STEP:2</p>
           <p className="text-xl py-5">
             Create your Node in exchange of your tokens
@@ -250,16 +250,18 @@ const HowItWorksSection = (props: Props) => {
               <VipComponent />
             </div>
           </div>
-
-          <button
-            type="button"
-            className="my-3 bg-white px-6 py-3 rounded-full text-white font-bold uppercase"
-          >
-            <p className="tracking-widest font-extrabold text-transparent bg-clip-text text-white text_background_gradient">
-              BUY $CON
-            </p>
-          </button>
+          <div className="my-2">
+            <button
+              type="button"
+              className="my-3 bg-white px-6 py-3 rounded-full text-white font-bold uppercase"
+            >
+              <p className="tracking-widest font-extrabold text-transparent bg-clip-text text-white text_background_gradient">
+                BUY $CONm
+              </p>
+            </button>
+          </div>
         </div>
+
         <div className="step3 my-3 text-center text-white">
           <p className="text-2xl font-bold">STEP:3</p>
           <p className="text-2xl py-5">

@@ -254,7 +254,7 @@ const CreateNodeSection = (props: Props) => {
           </p>
 
           <div className="w-full  my-5 flex flex-col sm:flex-row items-center justify-center">
-            <div className="w-full md:w-11/12 xl:w-5/6 text-gray-600 sm:text-white px-1 md:px-2 xl:px-5 xl:px-16 2xl:px-24  my-5 gap-y-10 flex flex-col sm:flex-row justify-center gap-2 sm:gap-2 xl:gap-5 2xl:gap-10 ">
+            <div className="w-full md:w-11/12 xl:w-5/6 text-gray-600 sm:text-white px-1 md:px-2 xl:px-5 2xl:px-24  my-5 gap-y-10 flex flex-col sm:flex-row justify-center gap-2 sm:gap-2 xl:gap-5 2xl:gap-10 ">
               <div className="w-full">
                 <AshtonComponent />
               </div>
@@ -268,12 +268,12 @@ const CreateNodeSection = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="p-5 sm:p-16 flex flex-col sm:flex-row sm:items-start gap-16">
-        <div className="w-full sm:w-1/2">
+      <div className="p-2  md:p-10 xl:p-16 flex flex-col md:flex-row md:items-start gap-5 xl:gap-16">
+        <div className="w-full md:w-1/2">
           <p className="my-2 text-white font-bold">
             Create a $CON Node with CON$ tokens to earn CON$ rewards.
           </p>
-          <p className="my-2 text-white text-lg sm:tracking-wider">
+          <p className="my-2 text-white text-lg md:tracking-wider">
             Rewards calculations are based on many factors, including the number
             of nodes, node revenue, token price, and protocol revenue, and they
             are variable.
@@ -290,14 +290,14 @@ const CreateNodeSection = (props: Props) => {
             </button>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 sm:px-10">
+        <div className="w-full md:w-1/2 md:px-10">
           <input
             type="text"
             placeholder="Name your code"
-            className="my-5 sm:py-3 sm:px-3 block w-full text-sm text-slate-500 rounded-lg  bg-transparent"
+            className="my-5 md:py-3 md:px-3 block w-full text-sm text-slate-500 rounded-lg  bg-transparent"
           />
 
-          <p className="my-3  py-3 text-transparent text-center sm:text-left text-lg bg-clip-text text_background_gradient">
+          <p className="my-3  py-3 text-transparent text-center md:text-left text-lg bg-clip-text text_background_gradient">
             Please approve the contract before creating a node if this is your
             first interaction.
           </p>
